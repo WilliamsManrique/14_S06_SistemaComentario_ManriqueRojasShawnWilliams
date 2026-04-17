@@ -1,0 +1,100 @@
+.container {
+  width: 90%;
+  margin: auto;
+  font-family: Arial;
+}
+
+/* encabezado */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.counter {
+  color: #555;
+  font-weight: bold;
+}
+
+/* layout 2 columnas */
+.grid {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* cards */
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* formulario */
+.form-box {
+  width: 35%;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #125aa0;
+}
+
+/* tabla */
+.table-box {
+  width: 65%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #1976d2;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background: #f5f5f5;
+}
+
+/* eliminar */
+.delete {
+  background: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.delete:hover {
+  background: darkred;
+}
+
+td:nth-child(3) {
+  color: #1976d2;
+  font-weight: bold;
+}

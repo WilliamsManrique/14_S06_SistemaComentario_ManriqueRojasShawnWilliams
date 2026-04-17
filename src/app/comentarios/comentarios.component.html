@@ -1,0 +1,77 @@
+<div class="container">
+
+  <!-- ENCABEZADO -->
+  <div class="header">
+    <h2>📢 Gestión de Comentarios</h2>
+    <p class="counter">Total comentarios: {{ contador }}</p>
+  </div>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="grid">
+
+    <!-- FORMULARIO -->
+    <div class="form-box">
+
+  <h3> Agregar Usuario</h3>
+
+  <input
+    type="text"
+    placeholder="Nombre"
+    [(ngModel)]="nuevoComentario.name"
+  >
+
+  <input
+    type="email"
+    placeholder="Email"
+    [(ngModel)]="nuevoComentario.email"
+  >
+
+  <textarea
+    placeholder="Escribe tu comentario..."
+    [(ngModel)]="nuevoComentario.body"
+  ></textarea>
+
+  <button (click)="enviarComentario()">
+    Enviar comentario
+  </button>
+
+</div>
+
+    <!-- TABLA -->
+    <div class="card table-box">
+
+      <h3>📋 Lista de comentarios</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Comentario</th>
+            <th>Fecha</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let c of comentarios; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ c.name }}</td>
+            <td>{{ c.email }}</td>
+            <td>{{ c.body }}</td>
+            <td>{{ c.fecha || 'Sin fecha' }}</td>
+            <td>
+              <button class="delete" (click)="eliminarComentario(i)">
+                🗑
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
